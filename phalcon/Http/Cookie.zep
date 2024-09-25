@@ -43,7 +43,7 @@ class Cookie extends AbstractInjectionAware implements CookieInterface
     /**
      * @var bool
      */
-    protected httpOnly;
+    protected httpOnly = false;
 
     /**
      * @var string
@@ -100,9 +100,9 @@ class Cookie extends AbstractInjectionAware implements CookieInterface
         var value = null,
         int expire = 0,
         string path = "/",
-        bool secure = null,
-        string domain = null,
-        bool httpOnly = null,
+        bool secure = true,
+        string domain = "",
+        bool httpOnly = false,
         array options = []
     ) {
         let this->name     = name,
