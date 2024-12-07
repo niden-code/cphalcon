@@ -2077,6 +2077,32 @@ class Manager implements ManagerInterface, InjectionAwareInterface, EventsAwareI
         return null;
     }
 
+   /**
+     * Removes a behavior from a model
+     *
+     * @param ModelInterface $model
+     * @param string         $behaviorClass
+     */
+    public function removeBehavior(
+        <ModelInterface> model,
+        string behaviorClass
+    ) -> void {
+        var behavior, entityName, key;
+
+        let entityName = mb_strtolower(get_class(model));
+
+        if (isset(this->behaviors[entityName])) {
+            for key, behavior in this->behaviors[entityName] {
+                if (get_class(behavior) === behaviorClass) {
+                    unset(this->behaviors[entityName][key]);
+                }
+            }
+
+            // Reindex the array to remove gaps
+            let this->behaviors[entityName] = array_values(this->behaviors[entityName]);
+        }
+    }
+
     /**
      * Sets both write and read connection service for a model
      *
