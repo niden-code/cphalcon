@@ -378,6 +378,16 @@ interface ManagerInterface
     public function notifyEvent(string! eventName, <ModelInterface> model);
 
     /**
+     * Removes a behavior from a model
+     *
+     * @param ModelInterface $model
+     * @param string         $behaviorClass
+     *
+     * @return void
+     */
+    public function removeBehavior(<ModelInterface> model, string behaviorClass) -> void;
+
+    /**
      * Sets both write and read connection service for a model
      */
     public function setConnectionService(<ModelInterface> model, string! connectionService) -> void;
