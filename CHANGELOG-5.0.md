@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.8.x](https://github.com/phalcon/cphalcon/releases/tag/v5.8.x) (xxxx-xx-xx)
+## [5.8.1](https://github.com/phalcon/cphalcon/releases/tag/v5.8.1) (2024-12-25)
 
 ### Changed
 
@@ -16,19 +16,8 @@
 - Fixed `Phalcon\Filter\Validation\Validator\File\MimeType::validate` to close the handle when using `finfo` [#16647](https://github.com/phalcon/cphalcon/issues/16647)
 - Fixed `Phalcon\Mvc\Model\Manager::getRelationRecords` to explicitly set the `referencedModel` in the conditions along with the `referencedFields` [#16655](https://github.com/phalcon/cphalcon/pull/16655)
 - Fixed `Phalcon\Image\Adapters\AbstractAdapter::watermark` to correctly calculate the Y offset [#16658](https://github.com/phalcon/cphalcon/issues/16658)
-
-### Removed
-
-
-## [5.8.0](https://github.com/phalcon/cphalcon/releases/tag/v5.8.0) (2024-07-09)
-
-### Changed
-
-### Added
-
-### Fixed
-
 - Fixed `Phalcon\Di\Injectable` to reference the correct instance of `Phalcon\Di\Di` in the docblock property [#16634](https://github.com/phalcon/cphalcon/issues/16634)
+- Fixed `Phalcon\Filter\Filter` to have the correct docblock for IDE completion
 
 ### Removed
 
