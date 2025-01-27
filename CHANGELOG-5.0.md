@@ -8,6 +8,7 @@
 
 ### Added
 
+- Added `Phalcon\Mvc\Model\Manager::removeBehavior` to be able to remove behaviors from models on demand [#277](https://github.com/phalcon/phalcon/issues/277)
 
 ### Fixed
 
